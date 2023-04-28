@@ -94,22 +94,55 @@ public class Lab2P1_LuisHenriquez {
                  sumas = arriba / abajo;
                  contador = contador * sumas;
               i = i + 1;
-              }
-               res = contador * 2;
+              }//ESTA ES LA SOLUCION DE LA FORMULA
+               res = contador * 2;//EL Pi SOBRE 2 NO SE DIVIDE SI NO QUE SE PASA A MULTIPLICAR
               System.out.println("Pi: "+res);
               break;            
               
                 
           
           case 3:
+              System.out.println("Ingrese A");
+              int Num1 = leer.nextInt();
+               System.out.println("Ingrese B");
+              int Num2 = leer.nextInt();
+             
+              
+              while (Num1<=0 || Num2<=0){
+              System.out.println(Num1);
+              System.out.println(Num2);
+              System.out.println("Los numeros tienen que ser positivos");
+              System.out.println("Ingrese A");
+               Num1 = leer.nextInt();
+               System.out.println("Ingrese B");
+               Num2 = leer.nextInt();
+              }//En caso que un numero sea cero
+              
+                  while (Num1 != Num2) {
+            if (Num1 > Num2) {
+                Num1 = Num1-Num2;
+            } else {
+                Num2 = Num2 - Num1;
+            }//RESTAS PARA SACAR EL MCD
+        }
+        
+        // Imprimir el resultado
+        System.out.println("El MCD es: " + Num1);
+        
+                break;
           
           default : 
                if (opc != 3){
                     System.out.println("ERROR OPCION INCORRECTA");
-               }
+               }//OPCION INCORRECTA
                break;
+                  
+              }//fin del swtich
           
-      }//fin del switch
+       System.out.println("Si quiere continuar ingrese {1} si no ingrese cualquier otro numero:");
+     Respuesta = leer.nextInt();   
+     //AQUI INGRESA SI QUIERE VOLVER ENTRAR AL MENU
+      }//fin del while
      
      
      
@@ -118,11 +151,8 @@ public class Lab2P1_LuisHenriquez {
      
      
      
-     System.out.println("Si quiere continuar ingrese {1} si no ingrese cualquier otro numero:");
-     Respuesta = leer.nextInt();
+     
      }
      
      
     }
-    
-}
